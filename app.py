@@ -189,9 +189,9 @@ def call_timeline_api(text, api_key):
         "randomness": 0.5,
         "stream_data": False,
         "training_data": (
-            "Extract only the timeline section from the provided input. Remove the word 'timeline' as a topic heading, "
-            "and please don't put any other text apart from that. Return it in the form of date and task with one date task pair in each line."
-            "the output should be date (in dd-mm-yyyy):the task assigned"
+            """Extract only the timeline section from the provided input. Remove the word 'timeline' as a topic heading,
+            and please don't put any other text apart from that. Return it in the form of date and task with one date task pair in each line.
+            the output should be date (in dd-mm-yyyy):the task assigned"""
 
         ),
         "response_type": "text"
