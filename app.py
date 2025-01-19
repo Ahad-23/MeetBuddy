@@ -284,7 +284,7 @@ with tab2:
             input_text = st.text_area("Input Text")
             Summarize = st.form_submit_button("Summarize")
     with col2:
-        # st.subheader("Summary Result")
+        st.subheader("Summary Result")
         if Summarize:
             if input_text.strip():
                 summary = call_text_summarization_api(input_text, worqhat_text_summarizer_api_key,meeting_day,meeting_date_str)
