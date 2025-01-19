@@ -1,37 +1,37 @@
-# Meetbuddy
+# **Meetbuddy**
 
-This project simplifies corporate meetings by integrating transcription and summarization. Powered by Worqhat APIs, it transcribes audio/video files, summarizes content, extracts timelines, adds deadlines to Google Calendar, and stores data for easy retrieval.
-
----
-
-## Features
-
-- *Speech-to-Text*: Convert meeting audio or video files to text using Worqhat's API.
-- *Text Summarization*: Generate concise summaries with extracted timelines.
-- *Video Summarization*: Extract audio from video files, transcribe, and summarize.
-- *Google Calendar Integration*: Automatically create calendar events for tasks.
-- *Database Storage*: Store and retrieve meeting data using MongoDB.
-- *Search and Export*: Search summaries by title or date range and export results.
+This project simplifies **corporate meetings** by integrating transcription and summarization. Powered by **Worqhat APIs**, it transcribes audio/video files, summarizes content, extracts timelines, adds deadlines to **Google Calendar**, and stores data for easy retrieval.
 
 ---
 
-## Requirements
+## **Features**
 
-- *Python*: 3.7 or later
-- *Libraries*:
-  - streamlit
-  - requests
-  - pymongo
-  - moviepy
-  - google-auth-oauthlib
-  - google-api-python-client
-- *MongoDB*: Hosted or local instance
-- *Worqhat API Keys*: For speech-to-text and summarization
-- *Google Calendar API*: For task scheduling
+- **Speech-to-Text**: Convert meeting audio or video files to text using **Worqhat's API**.
+- **Text Summarization**: Generate concise summaries with extracted timelines.
+- **Video Summarization**: Extract audio from video files, transcribe, and summarize.
+- **Google Calendar Integration**: Automatically create calendar events for tasks.
+- **Database Storage**: Store and retrieve meeting data using **MongoDB**.
+- **Search and Export**: Search summaries by title or date range and export results.
 
 ---
 
-## Setup Instructions
+## **Requirements**
+
+- **Python**: 3.7 or later
+- **Libraries**:
+  - `streamlit`
+  - `requests`
+  - `pymongo`
+  - `moviepy`
+  - `google-auth-oauthlib`
+  - `google-api-python-client`
+- **MongoDB**: Hosted or local instance
+- **Worqhat API Keys**: For speech-to-text and summarization
+- **Google Calendar API**: For task scheduling
+
+---
+
+## **Setup Instructions**
 
 ### 1. Clone the Repository
 ```bash
