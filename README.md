@@ -1,4 +1,4 @@
-# Meet-mate
+# Meetbuddy
 
 This project simplifies corporate meetings by integrating transcription and summarization. Powered by Worqhat APIs, it transcribes audio/video files, summarizes content, extracts timelines, adds deadlines to Google Calendar, and stores data for easy retrieval.
 
