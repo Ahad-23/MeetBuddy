@@ -189,10 +189,8 @@ def call_timeline_api(text, api_key):
         "randomness": 0.5,
         "stream_data": False,
         "training_data": (
-            """Extract only the timeline section from the provided input. Remove the word 'timeline' as a topic heading,
-            and please don't put any other text apart from that. Return it in the form of date and task with one date task pair in each line.
-            the output should be date (in dd-mm-yyyy):the task assigned"""
-
+            "Extract only the timeline section from the provided input. Remove the word 'timeline' as a topic heading, "
+            "and please don't put any other text apart from that. Return it in the form of date and task with one date task pair in each line."
         ),
         "response_type": "text"
     }
@@ -244,6 +242,8 @@ with tab1:
                 timeline_list=timeline(summary)
                 for i in timeline_list:
                     # Authenticate and create a calendar event
+                    st.write(i)
+
                     service = authenticate_google_calendar()
                     colon_index=i.find(":")
                     if colon_index == -1:
@@ -292,7 +292,7 @@ with tab2:
                 summary = call_text_summarization_api(input_text, worqhat_text_summarizer_api_key,meeting_day,meeting_date_str)
                 summary_start_index=summary.find("Summary:")
                 timeline_list=timeline(summary)
-                summary_print=summary[summary_start_index+len("Summary"):]
+                summary_print=summary[summary_start_index+len("Summary:\n\n"):]
                 st.write(summary_print)
                 for i in timeline_list:
                     # Authenticate and create a calendar event
@@ -305,7 +305,6 @@ with tab2:
 
                     title = i[colon_index:]
                     try:
-                        st.write(i)
                         deadline_str = i[:colon_index].strip()  # Remove leading/trailing whitespace
                         deadline = datetime.strptime(deadline_str, "%d-%m-%Y")
                         cal_link=event_link = create_calendar_event(service, title, deadline)
@@ -314,6 +313,8 @@ with tab2:
                         print(f"Warning: Invalid deadline format in '{i}'. Skipping event creation.")
                     title=i[colon_index:]
                 timeline_start = summary.find("**Timelines:**\n\n")
+                # summary_print=summary[summary_start_index+len("Summary:\n\n"):]
+                # st.write(summary_print)
                 insert_db(meeting_title,input_text,summary[summary_start_index+len("Summary:\n\n"):timeline_start],timeline_list)
             else:
                 st.error("Please enter text to summarize.")
