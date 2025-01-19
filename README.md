@@ -34,22 +34,23 @@ This project simplifies corporate meetings by integrating transcription and summ
 ## Setup Instructions
 
 ### 1. Clone the Repository
-bash
+```bash
 git clone https://github.com/Ahad-23/RenAIssance-Hackathon.git
 cd RenAIssance-Hackathon
-
+```
 
 ### 2. Install Required Libraries
-bash
+```bash
 pip install -r requirements.txt
-
+```
 ### 3. Set Up Environment Variables
 Create a .env file in the project directory and set the following environment variables:
 Example .env:
-bash
+```bash
 WORQHAT_TEXT_SUMMARIZER_API_KEY=your_worqhat_aicon-v4-nano-160824_api
 WORQHAT_TEXT_SUMMARIZATION_API_KEY=your_worqhat_speech_to_text_api
 MONGO_URI=your_mongo_uri
+```
 
 
 ### 4. Set Up Google Calendar API
@@ -60,9 +61,9 @@ Create OAuth 2.0 credentials and download the credentials.json file.
 Rename it to client_secret.apps.googleusercontent.com.json and place it in the project directory.
 
 ### 5. Run the Application
-bash
+```bash
 streamlit run app.py
-
+```
 
 ### 6. Access the Application
 Open your browser and navigate to http://localhost:8501 to use the application.
