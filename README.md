@@ -39,7 +39,7 @@ Deployed Project Link: https://meetbuddy.streamlit.app/
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/Ahad-23/RenAIssance-Hackathon.git
+git clone https://github.com/Ahad-23/MeetBuddy.git
 cd RenAIssance-Hackathon
 ```
 
